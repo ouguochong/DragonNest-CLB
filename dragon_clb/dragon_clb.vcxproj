@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{905427CE-2A11-4FFA-8B09-362715613B62}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>dragon_clb</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="account.hpp" />
+    <ClInclude Include="basic_types.hpp" />
+    <ClInclude Include="button.hpp" />
+    <ClInclude Include="channel_info.hpp" />
+    <ClInclude Include="character_info.hpp" />
+    <ClInclude Include="checkbox.hpp" />
+    <ClInclude Include="config.hpp" />
+    <ClInclude Include="dragonnest.hpp" />
+    <ClInclude Include="dragonnest_pool.hpp" />
+    <ClInclude Include="field_stage.hpp" />
+    <ClInclude Include="generic.hpp" />
+    <ClInclude Include="io_packet.hpp" />
+    <ClInclude Include="label.hpp" />
+    <ClInclude Include="listbox.hpp" />
+    <ClInclude Include="listview.hpp" />
+    <ClInclude Include="login_stage.hpp" />
+    <ClInclude Include="mt_random.hpp" />
+    <ClInclude Include="opcodes.hpp" />
+    <ClInclude Include="output.hpp" />
+    <ClInclude Include="panel.hpp" />
+    <ClInclude Include="png_image.hpp" />
+    <ClInclude Include="resource.hpp" />
+    <ClInclude Include="rudp_connection.hpp" />
+    <ClInclude Include="rudp_crypto.hpp" />
+    <ClInclude Include="rudp_definitions.hpp" />
+    <ClInclude Include="rudp_socket.hpp" />
+    <ClInclude Include="rudp_socket_frame.hpp" />
+    <ClInclude Include="session.hpp" />
+    <ClInclude Include="main_form.hpp" />
+    <ClInclude Include="stage_base.hpp" />
+    <ClInclude Include="tab_control.hpp" />
+    <ClInclude Include="tcp_socket.hpp" />
+    <ClInclude Include="tea_crypto.hpp" />
+    <ClInclude Include="textbox.hpp" />
+    <ClInclude Include="village_stage.hpp" />
+    <ClInclude Include="widget.hpp" />
+    <ClInclude Include="world_info.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="basic_types.cpp" />
+    <ClCompile Include="dragonnest.cpp" />
+    <ClCompile Include="dragonnest_pool.cpp" />
+    <ClCompile Include="field_stage.cpp" />
+    <ClCompile Include="generic.cpp" />
+    <ClCompile Include="io_packet.cpp" />
+    <ClCompile Include="login_stage.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="mt_random.cpp" />
+    <ClCompile Include="output.cpp" />
+    <ClCompile Include="png_image.cpp" />
+    <ClCompile Include="rudp_connection.cpp" />
+    <ClCompile Include="rudp_crypto.cpp" />
+    <ClCompile Include="rudp_socket.cpp" />
+    <ClCompile Include="rudp_socket_frame.cpp" />
+    <ClCompile Include="main_form.cpp" />
+    <ClCompile Include="stage_base.cpp" />
+    <ClCompile Include="tcp_socket.cpp" />
+    <ClCompile Include="tea_crypto.cpp" />
+    <ClCompile Include="village_stage.cpp" />
+    <ClCompile Include="widget.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="resource.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
